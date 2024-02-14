@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <aside id="sidebar">
+        <button id="overview-btn">Overview</button>
+        <button id="automation-btn">Automation</button>
+        <button id="settings-btn">Settings</button>
+    
+        <h2>Device List</h2>
+
+        <section id="device-list">
+            <!-- <div class="device-group" id="device-1-group">
+                <img src="" alt="">
+                <p>Bulb 1</p>
+                <input type="range" name="" id="bri-slider">
+                <button id="onOff">On/Off</button>
+            </div>
+            <div class="device-group" id="device-2-group">
+                <img src="" alt="">
+                <p>Bulb 2</p>
+                <input type="range" name="" id="bri-slider">
+                <button id="on-off-btn">On/Off</button>
+            </div> -->
+        </section>
+    </aside>
+
+    <h1 id="section-title">OVERVIEW</h1>
+    <main id="overview-main">
+        <!-- <div class="widget" id="widget-bulb-1">
+            <img src="" alt="">
+            <h3 id="itemName">Bulb 1</h3>
+            <button id="optionButton">Options</button>
+            <p>hue</p>
+            <input type="range" name="" id="hueSlider">
+            <p>sat</p>
+            <input type="range" name="" id="valSlider">
+            <p>val</p>
+            <input type="range" name="" id="briSlider">
+        </div>
+
+        <div class="widget" id="widget-bulb-2">
+            <img src="" alt="">
+            <h3 id="itemName">Bulb 2</h3>
+            <button id="optionButton">Options</button>
+            <p>hue</p>
+            <input type="range" name="" id="hueSlider">
+            <p>sat</p>
+            <input type="range" name="" id="valSlider">
+            <p>val</p>
+            <input type="range" name="" id="briSlider">
+        </div> -->
+    </main>
+    
+
+    <main id="automation-main" class="hidden">
+        <!-- <div class="card" id="card-automation-1">
+            <img src="" alt="">
+            <h3>Automation 1</h3>
+            <div id="buttonGroup">
+                <button id="enable">Enable</button>
+                <button id="viewLog">View Log</button>
+            </div>
+            <section id="automationLogSection">
+                <p id="log-line-1">Some log info</p>
+                <p id="log-line-2">Some log info</p>
+                <p id="log-line-3">Some log info</p>
+            </section>
+        </div>
+        <div class="card" id="card-automation-2">
+            <img src="" alt="">
+            <h3>Automation 2</h3>
+            <button id="enable">Enable</button>
+            <button id="viewLog">View Log</button>
+        </div> -->
+
+        <script src="../static/js/automation.js" type="module"></script>
+    </main>
+
+
+
+    <main id="settings-main" class="hidden">
+        <h2>Aqara</h2>        
+        <table>
+            <tr>
+                <td class="row-key">Auth Code Duration</td>
+                <td class="row-val"><input type="text" name="" id="aqara-auth-code-duration" value="1h"></td>
+            </tr>
+            <tr>
+                <td class="row-key">Generate Auth Code</td>
+                <td class="row-val"><button id="aqara-gen-auth-code-btn">Generate</button></td>
+            </tr>
+            <tr>
+                <td class="row-key">Set Auth Code</td>
+                <td class="row-val"><input type="text" name="" id="aqara-auth-code"></td>
+            </tr>
+            <tr>
+                <td class="row-key">Refresh Access Token</td>
+                <td class="row-val"><button id="aqara-gen-access-token-btn">Refresh</button></td>
+            </tr>
+            <tr>
+                <td class="row-key">Email</td>
+                <td class="row-val"><input type="text" name="" id="aqara-email"></td>
+            </tr>
+            <tr>
+                <td class="row-key">AppId</td>
+                <td class="row-val"><input type="text" name="" id="aqara-appid"></td>
+            </tr>
+            <tr>
+                <td class="row-key">KeyId</td>
+                <td class="row-val"><input type="text" name="" id="aqara-keyid"></td>
+            </tr>
+            <tr>
+                <td class="row-key">AppKey</td>
+                <td class="row-val"><input type="text" name="" id="aqara-appkey"></td>
+            </tr>
+        </table>
+        <h2>TP-Link Tapo</h2>  
+        <table>
+            <tr>
+                <td class="row-key">Username</td>
+                <td class="row-val"><input type="text" name="" id="tapo-username"></td>
+            </tr>
+            <tr>
+                <td class="row-key">Password</td>
+                <td class="row-val"><input type="password" name="" id="tapo-password"></td>
+            </tr>
+        </table>       
+
+        <div id="submit-changes">
+            <button id="cancel-btn">Cancel</button>
+            <button id="apply-btn">Apply</button>
+        </div>
+        <script src="../static/js/settings.js" type="module"></script>
+    </main>
+
+    <script src="../static/js/index.js" type="module"></script>
+</body>
+</html>

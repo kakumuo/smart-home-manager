@@ -1,0 +1,201 @@
+:root{
+    --padding: 10px;
+    --margin-outer:5px;
+    --sidebar-color: rgb(242, 241, 240);
+    --main-color: white;
+    --card-border-radius: 20px;
+    --card-spacing: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    
+    & h1 {
+        padding: var(--padding);
+        background: var(--main-color);
+    }
+}
+
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 100%;
+    width: 20%;
+    height: 100%;
+
+    background-color: var(--sidebar-color);
+    padding: var(--padding);
+
+    & select {
+        font-size: xx-large;
+        margin-bottom: calc(var(--padding) * 7);
+    }
+
+    & button {
+        padding: var(--padding);
+        letter-spacing: 1px;
+    }
+
+    & h2 {
+        margin-top:  auto;
+    }
+
+    & #device-list {
+        margin-top: auto;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & div {
+            border:  solid 1px;
+        }
+    }
+}
+
+main {
+    flex: 1 1 auto;
+    width: 80%;
+    background: var(--main-color); 
+    padding: var(--padding);
+}
+
+#overview-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--card-border-radius);
+    width: 200px;
+    box-shadow: lightgray -1px -1px 9px 1px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 5px
+}
+
+
+
+
+
+
+#automation-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & .card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        width: 100%;
+        box-shadow: whitesmoke -1px -1px 10px 1px;
+        padding: 10px;
+
+        & h3 {
+            width: 100%;
+        }
+        
+        & #automationLogSection {
+            margin-top: 10px;
+            width: 100%;
+            background-color: rgb(32,32,32);
+            padding: 10px;
+            color: white;
+            & p {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            max-height: 100px;
+            overflow-y: auto;
+            overflow-x: scroll;
+        }
+
+        & #buttonGroup {
+            display: flex;
+            flex-direction: row;
+        }
+
+        & button {
+            flex: 1;
+            width: 100%;
+        }
+    }
+
+    & #add-automation-btn {
+        margin-top: auto;
+    }
+}
+
+
+
+
+
+
+#settings-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & table {
+        width: 100%;
+        border-collapse:  collapse;
+        margin-left: 20px;
+
+        & td {
+            min-width: 200px;
+        }
+    }
+
+    & #submit-changes {
+        display: flex;
+        margin-top: auto;
+
+        & * {
+            width: 50%;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+.hidden {
+    display: none !important;
+}
+
+.button-selected {
+    background-color: #1b1b1b;
+    color: white;
+}
